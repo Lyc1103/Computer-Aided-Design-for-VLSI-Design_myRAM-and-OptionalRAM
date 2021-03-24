@@ -1,0 +1,288 @@
+Simulator report for RAM_2_PORT
+Fri Dec 25 13:34:15 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 55 nodes     ;
+; Simulation Coverage         ;      27.54 % ;
+; Total Number of Transitions ; 134          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++---------------------------------------------------------------------------------------+
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ALTSYNCRAM ;
++---------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      27.54 % ;
+; Total nodes checked                                 ; 55           ;
+; Total output ports checked                          ; 69           ;
+; Total output ports with complete 1/0-value coverage ; 19           ;
+; Total output ports with no 1/0-value coverage       ; 50           ;
+; Total output ports with no 1-value coverage         ; 50           ;
+; Total output ports with no 0-value coverage         ; 50           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                               ; Output Port Name                                                                  ; Output Port Type ;
++-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[1] ; portbdataout1    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[2] ; portbdataout2    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[3] ; portbdataout3    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[4] ; portbdataout4    ;
+; |RAM_2_PORT|Read_Data[1]                                                                ; |RAM_2_PORT|Read_Data[1]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[2]                                                                ; |RAM_2_PORT|Read_Data[2]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[3]                                                                ; |RAM_2_PORT|Read_Data[3]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[4]                                                                ; |RAM_2_PORT|Read_Data[4]                                                          ; padio            ;
+; |RAM_2_PORT|Write_En                                                                    ; |RAM_2_PORT|Write_En~corein                                                       ; combout          ;
+; |RAM_2_PORT|Clock                                                                       ; |RAM_2_PORT|Clock~corein                                                          ; combout          ;
+; |RAM_2_PORT|Write_Adr[0]                                                                ; |RAM_2_PORT|Write_Adr[0]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Adr[1]                                                                ; |RAM_2_PORT|Write_Adr[1]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Read_Adr[0]                                                                 ; |RAM_2_PORT|Read_Adr[0]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Read_Adr[1]                                                                 ; |RAM_2_PORT|Read_Adr[1]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Data[1]                                                               ; |RAM_2_PORT|Write_Data[1]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[2]                                                               ; |RAM_2_PORT|Write_Data[2]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[3]                                                               ; |RAM_2_PORT|Write_Data[3]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[4]                                                               ; |RAM_2_PORT|Write_Data[4]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Clock~clkctrl                                                               ; |RAM_2_PORT|Clock~clkctrl                                                         ; outclk           ;
++-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                               ; Output Port Name                                                                   ; Output Port Type ;
++-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[0]  ; portbdataout0    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[5]  ; portbdataout5    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[6]  ; portbdataout6    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[7]  ; portbdataout7    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[8]  ; portbdataout8    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[9]  ; portbdataout0    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[10] ; portbdataout1    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[11] ; portbdataout2    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[12] ; portbdataout3    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[13] ; portbdataout4    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[14] ; portbdataout5    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[15] ; portbdataout6    ;
+; |RAM_2_PORT|Read_Data[0]                                                                ; |RAM_2_PORT|Read_Data[0]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[5]                                                                ; |RAM_2_PORT|Read_Data[5]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[6]                                                                ; |RAM_2_PORT|Read_Data[6]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[7]                                                                ; |RAM_2_PORT|Read_Data[7]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[8]                                                                ; |RAM_2_PORT|Read_Data[8]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[9]                                                                ; |RAM_2_PORT|Read_Data[9]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[10]                                                               ; |RAM_2_PORT|Read_Data[10]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[11]                                                               ; |RAM_2_PORT|Read_Data[11]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[12]                                                               ; |RAM_2_PORT|Read_Data[12]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[13]                                                               ; |RAM_2_PORT|Read_Data[13]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[14]                                                               ; |RAM_2_PORT|Read_Data[14]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[15]                                                               ; |RAM_2_PORT|Read_Data[15]                                                          ; padio            ;
+; |RAM_2_PORT|Write_Data[0]                                                               ; |RAM_2_PORT|Write_Data[0]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Adr[2]                                                                ; |RAM_2_PORT|Write_Adr[2]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[3]                                                                ; |RAM_2_PORT|Write_Adr[3]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[4]                                                                ; |RAM_2_PORT|Write_Adr[4]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[5]                                                                ; |RAM_2_PORT|Write_Adr[5]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[6]                                                                ; |RAM_2_PORT|Write_Adr[6]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[7]                                                                ; |RAM_2_PORT|Write_Adr[7]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[8]                                                                ; |RAM_2_PORT|Write_Adr[8]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Read_Adr[2]                                                                 ; |RAM_2_PORT|Read_Adr[2]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[3]                                                                 ; |RAM_2_PORT|Read_Adr[3]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[4]                                                                 ; |RAM_2_PORT|Read_Adr[4]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[5]                                                                 ; |RAM_2_PORT|Read_Adr[5]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[6]                                                                 ; |RAM_2_PORT|Read_Adr[6]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[7]                                                                 ; |RAM_2_PORT|Read_Adr[7]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[8]                                                                 ; |RAM_2_PORT|Read_Adr[8]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Write_Data[5]                                                               ; |RAM_2_PORT|Write_Data[5]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[6]                                                               ; |RAM_2_PORT|Write_Data[6]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[7]                                                               ; |RAM_2_PORT|Write_Data[7]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[8]                                                               ; |RAM_2_PORT|Write_Data[8]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[9]                                                               ; |RAM_2_PORT|Write_Data[9]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[10]                                                              ; |RAM_2_PORT|Write_Data[10]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[11]                                                              ; |RAM_2_PORT|Write_Data[11]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[12]                                                              ; |RAM_2_PORT|Write_Data[12]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[13]                                                              ; |RAM_2_PORT|Write_Data[13]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[14]                                                              ; |RAM_2_PORT|Write_Data[14]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[15]                                                              ; |RAM_2_PORT|Write_Data[15]~corein                                                  ; combout          ;
++-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                               ; Output Port Name                                                                   ; Output Port Type ;
++-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[0]  ; portbdataout0    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[5]  ; portbdataout5    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[6]  ; portbdataout6    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[7]  ; portbdataout7    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a0 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[8]  ; portbdataout8    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[9]  ; portbdataout0    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[10] ; portbdataout1    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[11] ; portbdataout2    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[12] ; portbdataout3    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[13] ; portbdataout4    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[14] ; portbdataout5    ;
+; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|ram_block1a9 ; |RAM_2_PORT|altsyncram:altsyncram_component|altsyncram_hll1:auto_generated|q_b[15] ; portbdataout6    ;
+; |RAM_2_PORT|Read_Data[0]                                                                ; |RAM_2_PORT|Read_Data[0]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[5]                                                                ; |RAM_2_PORT|Read_Data[5]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[6]                                                                ; |RAM_2_PORT|Read_Data[6]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[7]                                                                ; |RAM_2_PORT|Read_Data[7]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[8]                                                                ; |RAM_2_PORT|Read_Data[8]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[9]                                                                ; |RAM_2_PORT|Read_Data[9]                                                           ; padio            ;
+; |RAM_2_PORT|Read_Data[10]                                                               ; |RAM_2_PORT|Read_Data[10]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[11]                                                               ; |RAM_2_PORT|Read_Data[11]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[12]                                                               ; |RAM_2_PORT|Read_Data[12]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[13]                                                               ; |RAM_2_PORT|Read_Data[13]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[14]                                                               ; |RAM_2_PORT|Read_Data[14]                                                          ; padio            ;
+; |RAM_2_PORT|Read_Data[15]                                                               ; |RAM_2_PORT|Read_Data[15]                                                          ; padio            ;
+; |RAM_2_PORT|Write_Data[0]                                                               ; |RAM_2_PORT|Write_Data[0]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Adr[2]                                                                ; |RAM_2_PORT|Write_Adr[2]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[3]                                                                ; |RAM_2_PORT|Write_Adr[3]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[4]                                                                ; |RAM_2_PORT|Write_Adr[4]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[5]                                                                ; |RAM_2_PORT|Write_Adr[5]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[6]                                                                ; |RAM_2_PORT|Write_Adr[6]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[7]                                                                ; |RAM_2_PORT|Write_Adr[7]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Write_Adr[8]                                                                ; |RAM_2_PORT|Write_Adr[8]~corein                                                    ; combout          ;
+; |RAM_2_PORT|Read_Adr[2]                                                                 ; |RAM_2_PORT|Read_Adr[2]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[3]                                                                 ; |RAM_2_PORT|Read_Adr[3]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[4]                                                                 ; |RAM_2_PORT|Read_Adr[4]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[5]                                                                 ; |RAM_2_PORT|Read_Adr[5]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[6]                                                                 ; |RAM_2_PORT|Read_Adr[6]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[7]                                                                 ; |RAM_2_PORT|Read_Adr[7]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Read_Adr[8]                                                                 ; |RAM_2_PORT|Read_Adr[8]~corein                                                     ; combout          ;
+; |RAM_2_PORT|Write_Data[5]                                                               ; |RAM_2_PORT|Write_Data[5]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[6]                                                               ; |RAM_2_PORT|Write_Data[6]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[7]                                                               ; |RAM_2_PORT|Write_Data[7]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[8]                                                               ; |RAM_2_PORT|Write_Data[8]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[9]                                                               ; |RAM_2_PORT|Write_Data[9]~corein                                                   ; combout          ;
+; |RAM_2_PORT|Write_Data[10]                                                              ; |RAM_2_PORT|Write_Data[10]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[11]                                                              ; |RAM_2_PORT|Write_Data[11]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[12]                                                              ; |RAM_2_PORT|Write_Data[12]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[13]                                                              ; |RAM_2_PORT|Write_Data[13]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[14]                                                              ; |RAM_2_PORT|Write_Data[14]~corein                                                  ; combout          ;
+; |RAM_2_PORT|Write_Data[15]                                                              ; |RAM_2_PORT|Write_Data[15]~corein                                                  ; combout          ;
++-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 25 13:34:15 2020
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off RAM_2_PORT -c RAM_2_PORT
+Info: Using vector source file "D:/1-4-3-大五上/電腦輔助VLSI設計/hw3_new_2/RAM_2_PORT.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      27.54 %
+Info: Number of transitions in simulation is 134
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 167 megabytes
+    Info: Processing ended: Fri Dec 25 13:34:15 2020
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

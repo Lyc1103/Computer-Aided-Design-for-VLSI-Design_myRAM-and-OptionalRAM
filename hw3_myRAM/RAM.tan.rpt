@@ -1,0 +1,956 @@
+Classic Timing Analyzer report for RAM
+Fri Dec 25 15:49:35 2020
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                  ;
++------------------------------+-------+---------------+-------------+---------------+--------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From          ; To           ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+---------------+--------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 10.126 ns   ; Write_Adr[8]  ; my_RAM~1111  ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 19.013 ns   ; my_RAM~1866   ; Read_Data[0] ; Clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 20.921 ns   ; Read_Adr[4]   ; Read_Data[0] ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.980 ns   ; Write_Data[7] ; my_RAM~4449  ; --         ; Clock    ; 0            ;
+; Total number of failed paths ;       ;               ;             ;               ;              ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+---------------+--------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------+-------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From         ; To          ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------+-------------+----------+
+; N/A                                     ; None                                                ; 10.126 ns  ; Write_Adr[8] ; my_RAM~1101 ; Clock    ;
+; N/A                                     ; None                                                ; 10.126 ns  ; Write_Adr[8] ; my_RAM~1103 ; Clock    ;
+; N/A                                     ; None                                                ; 10.126 ns  ; Write_Adr[8] ; my_RAM~1104 ; Clock    ;
+; N/A                                     ; None                                                ; 10.126 ns  ; Write_Adr[8] ; my_RAM~1106 ; Clock    ;
+; N/A                                     ; None                                                ; 10.126 ns  ; Write_Adr[8] ; my_RAM~1107 ; Clock    ;
+; N/A                                     ; None                                                ; 10.126 ns  ; Write_Adr[8] ; my_RAM~1111 ; Clock    ;
+; N/A                                     ; None                                                ; 9.914 ns   ; Write_Adr[8] ; my_RAM~1100 ; Clock    ;
+; N/A                                     ; None                                                ; 9.914 ns   ; Write_Adr[8] ; my_RAM~1113 ; Clock    ;
+; N/A                                     ; None                                                ; 9.909 ns   ; Write_Adr[8] ; my_RAM~1108 ; Clock    ;
+; N/A                                     ; None                                                ; 9.909 ns   ; Write_Adr[8] ; my_RAM~1109 ; Clock    ;
+; N/A                                     ; None                                                ; 9.909 ns   ; Write_Adr[8] ; my_RAM~1112 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2010 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2011 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2012 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2013 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2014 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2015 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2016 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2017 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2018 ; Clock    ;
+; N/A                                     ; None                                                ; 9.894 ns   ; Write_Adr[8] ; my_RAM~2025 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1082 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1083 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1084 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1085 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1086 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1087 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1088 ; Clock    ;
+; N/A                                     ; None                                                ; 9.822 ns   ; Write_Adr[8] ; my_RAM~1097 ; Clock    ;
+; N/A                                     ; None                                                ; 9.639 ns   ; Write_Adr[8] ; my_RAM~1089 ; Clock    ;
+; N/A                                     ; None                                                ; 9.639 ns   ; Write_Adr[8] ; my_RAM~1091 ; Clock    ;
+; N/A                                     ; None                                                ; 9.639 ns   ; Write_Adr[8] ; my_RAM~1092 ; Clock    ;
+; N/A                                     ; None                                                ; 9.639 ns   ; Write_Adr[8] ; my_RAM~1094 ; Clock    ;
+; N/A                                     ; None                                                ; 9.639 ns   ; Write_Adr[8] ; my_RAM~1096 ; Clock    ;
+; N/A                                     ; None                                                ; 9.584 ns   ; Write_Adr[8] ; my_RAM~1090 ; Clock    ;
+; N/A                                     ; None                                                ; 9.584 ns   ; Write_Adr[8] ; my_RAM~1093 ; Clock    ;
+; N/A                                     ; None                                                ; 9.584 ns   ; Write_Adr[8] ; my_RAM~1095 ; Clock    ;
+; N/A                                     ; None                                                ; 9.583 ns   ; Write_Adr[8] ; my_RAM~1659 ; Clock    ;
+; N/A                                     ; None                                                ; 9.583 ns   ; Write_Adr[8] ; my_RAM~1660 ; Clock    ;
+; N/A                                     ; None                                                ; 9.583 ns   ; Write_Adr[8] ; my_RAM~1662 ; Clock    ;
+; N/A                                     ; None                                                ; 9.583 ns   ; Write_Adr[8] ; my_RAM~1663 ; Clock    ;
+; N/A                                     ; None                                                ; 9.582 ns   ; Write_Adr[8] ; my_RAM~1386 ; Clock    ;
+; N/A                                     ; None                                                ; 9.582 ns   ; Write_Adr[8] ; my_RAM~1387 ; Clock    ;
+; N/A                                     ; None                                                ; 9.582 ns   ; Write_Adr[8] ; my_RAM~1394 ; Clock    ;
+; N/A                                     ; None                                                ; 9.559 ns   ; Write_Adr[8] ; my_RAM~1665 ; Clock    ;
+; N/A                                     ; None                                                ; 9.559 ns   ; Write_Adr[8] ; my_RAM~1666 ; Clock    ;
+; N/A                                     ; None                                                ; 9.559 ns   ; Write_Adr[8] ; my_RAM~1668 ; Clock    ;
+; N/A                                     ; None                                                ; 9.559 ns   ; Write_Adr[8] ; my_RAM~1672 ; Clock    ;
+; N/A                                     ; None                                                ; 9.473 ns   ; Write_Adr[8] ; my_RAM~5357 ; Clock    ;
+; N/A                                     ; None                                                ; 9.473 ns   ; Write_Adr[8] ; my_RAM~5358 ; Clock    ;
+; N/A                                     ; None                                                ; 9.352 ns   ; Write_Adr[8] ; my_RAM~1669 ; Clock    ;
+; N/A                                     ; None                                                ; 9.352 ns   ; Write_Adr[8] ; my_RAM~1670 ; Clock    ;
+; N/A                                     ; None                                                ; 9.352 ns   ; Write_Adr[8] ; my_RAM~1671 ; Clock    ;
+; N/A                                     ; None                                                ; 9.348 ns   ; Write_Adr[8] ; my_RAM~1819 ; Clock    ;
+; N/A                                     ; None                                                ; 9.348 ns   ; Write_Adr[8] ; my_RAM~1822 ; Clock    ;
+; N/A                                     ; None                                                ; 9.348 ns   ; Write_Adr[8] ; my_RAM~1825 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1802 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1804 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1805 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1807 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1808 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1809 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1810 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1811 ; Clock    ;
+; N/A                                     ; None                                                ; 9.299 ns   ; Write_Adr[8] ; my_RAM~1817 ; Clock    ;
+; N/A                                     ; None                                                ; 9.290 ns   ; Write_Adr[8] ; my_RAM~1803 ; Clock    ;
+; N/A                                     ; None                                                ; 9.290 ns   ; Write_Adr[8] ; my_RAM~1806 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1210 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1211 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1212 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1213 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1214 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1215 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1216 ; Clock    ;
+; N/A                                     ; None                                                ; 9.285 ns   ; Write_Adr[8] ; my_RAM~1225 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2026 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2027 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2028 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2029 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2030 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2031 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2032 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2033 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2034 ; Clock    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; Write_Adr[8] ; my_RAM~2041 ; Clock    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; Write_Adr[8] ; my_RAM~2019 ; Clock    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; Write_Adr[8] ; my_RAM~2020 ; Clock    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; Write_Adr[8] ; my_RAM~2021 ; Clock    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; Write_Adr[8] ; my_RAM~2022 ; Clock    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; Write_Adr[8] ; my_RAM~2023 ; Clock    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; Write_Adr[8] ; my_RAM~2024 ; Clock    ;
+; N/A                                     ; None                                                ; 9.178 ns   ; Write_Adr[7] ; my_RAM~3692 ; Clock    ;
+; N/A                                     ; None                                                ; 9.178 ns   ; Write_Adr[7] ; my_RAM~3695 ; Clock    ;
+; N/A                                     ; None                                                ; 9.157 ns   ; Write_Adr[8] ; my_RAM~1306 ; Clock    ;
+; N/A                                     ; None                                                ; 9.157 ns   ; Write_Adr[8] ; my_RAM~1309 ; Clock    ;
+; N/A                                     ; None                                                ; 9.157 ns   ; Write_Adr[8] ; my_RAM~1312 ; Clock    ;
+; N/A                                     ; None                                                ; 9.157 ns   ; Write_Adr[8] ; my_RAM~1321 ; Clock    ;
+; N/A                                     ; None                                                ; 9.117 ns   ; Write_Adr[8] ; my_RAM~1622 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1390 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1393 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1395 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1396 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1397 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1398 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1399 ; Clock    ;
+; N/A                                     ; None                                                ; 9.081 ns   ; Write_Adr[8] ; my_RAM~1400 ; Clock    ;
+; N/A                                     ; None                                                ; 9.075 ns   ; Write_Adr[8] ; my_RAM~1099 ; Clock    ;
+; N/A                                     ; None                                                ; 9.075 ns   ; Write_Adr[8] ; my_RAM~1102 ; Clock    ;
+; N/A                                     ; None                                                ; 9.075 ns   ; Write_Adr[8] ; my_RAM~1105 ; Clock    ;
+; N/A                                     ; None                                                ; 9.075 ns   ; Write_Adr[8] ; my_RAM~1110 ; Clock    ;
+; N/A                                     ; None                                                ; 9.064 ns   ; Write_Adr[7] ; my_RAM~3690 ; Clock    ;
+; N/A                                     ; None                                                ; 9.064 ns   ; Write_Adr[7] ; my_RAM~3696 ; Clock    ;
+; N/A                                     ; None                                                ; 9.064 ns   ; Write_Adr[7] ; my_RAM~3704 ; Clock    ;
+; N/A                                     ; None                                                ; 9.020 ns   ; Write_Adr[8] ; my_RAM~2035 ; Clock    ;
+; N/A                                     ; None                                                ; 9.020 ns   ; Write_Adr[8] ; my_RAM~2036 ; Clock    ;
+; N/A                                     ; None                                                ; 9.020 ns   ; Write_Adr[8] ; my_RAM~2037 ; Clock    ;
+; N/A                                     ; None                                                ; 9.020 ns   ; Write_Adr[8] ; my_RAM~2038 ; Clock    ;
+; N/A                                     ; None                                                ; 9.020 ns   ; Write_Adr[8] ; my_RAM~2039 ; Clock    ;
+; N/A                                     ; None                                                ; 9.020 ns   ; Write_Adr[8] ; my_RAM~2040 ; Clock    ;
+; N/A                                     ; None                                                ; 8.972 ns   ; Write_Adr[8] ; my_RAM~1677 ; Clock    ;
+; N/A                                     ; None                                                ; 8.972 ns   ; Write_Adr[8] ; my_RAM~1680 ; Clock    ;
+; N/A                                     ; None                                                ; 8.972 ns   ; Write_Adr[8] ; my_RAM~1683 ; Clock    ;
+; N/A                                     ; None                                                ; 8.972 ns   ; Write_Adr[8] ; my_RAM~1689 ; Clock    ;
+; N/A                                     ; None                                                ; 8.971 ns   ; Write_Adr[8] ; my_RAM~5353 ; Clock    ;
+; N/A                                     ; None                                                ; 8.964 ns   ; Write_Adr[8] ; my_RAM~1658 ; Clock    ;
+; N/A                                     ; None                                                ; 8.964 ns   ; Write_Adr[8] ; my_RAM~1661 ; Clock    ;
+; N/A                                     ; None                                                ; 8.964 ns   ; Write_Adr[8] ; my_RAM~1664 ; Clock    ;
+; N/A                                     ; None                                                ; 8.964 ns   ; Write_Adr[8] ; my_RAM~1673 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1530 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1531 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1532 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1533 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1534 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1535 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1536 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1537 ; Clock    ;
+; N/A                                     ; None                                                ; 8.962 ns   ; Write_Adr[8] ; my_RAM~1545 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~5354 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~5360 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~5361 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~5363 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~5364 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~1813 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~5366 ; Clock    ;
+; N/A                                     ; None                                                ; 8.960 ns   ; Write_Adr[8] ; my_RAM~1816 ; Clock    ;
+; N/A                                     ; None                                                ; 8.952 ns   ; Write_Adr[8] ; my_RAM~5643 ; Clock    ;
+; N/A                                     ; None                                                ; 8.952 ns   ; Write_Adr[8] ; my_RAM~5644 ; Clock    ;
+; N/A                                     ; None                                                ; 8.952 ns   ; Write_Adr[8] ; my_RAM~5646 ; Clock    ;
+; N/A                                     ; None                                                ; 8.952 ns   ; Write_Adr[8] ; my_RAM~5647 ; Clock    ;
+; N/A                                     ; None                                                ; 8.948 ns   ; Write_Adr[8] ; my_RAM~1898 ; Clock    ;
+; N/A                                     ; None                                                ; 8.948 ns   ; Write_Adr[8] ; my_RAM~1901 ; Clock    ;
+; N/A                                     ; None                                                ; 8.948 ns   ; Write_Adr[8] ; my_RAM~1904 ; Clock    ;
+; N/A                                     ; None                                                ; 8.948 ns   ; Write_Adr[8] ; my_RAM~1913 ; Clock    ;
+; N/A                                     ; None                                                ; 8.939 ns   ; Write_Adr[8] ; my_RAM~1594 ; Clock    ;
+; N/A                                     ; None                                                ; 8.939 ns   ; Write_Adr[8] ; my_RAM~1597 ; Clock    ;
+; N/A                                     ; None                                                ; 8.939 ns   ; Write_Adr[8] ; my_RAM~1600 ; Clock    ;
+; N/A                                     ; None                                                ; 8.939 ns   ; Write_Adr[8] ; my_RAM~1609 ; Clock    ;
+; N/A                                     ; None                                                ; 8.919 ns   ; Write_Adr[8] ; my_RAM~5899 ; Clock    ;
+; N/A                                     ; None                                                ; 8.919 ns   ; Write_Adr[8] ; my_RAM~5902 ; Clock    ;
+; N/A                                     ; None                                                ; 8.919 ns   ; Write_Adr[8] ; my_RAM~5905 ; Clock    ;
+; N/A                                     ; None                                                ; 8.919 ns   ; Write_Adr[8] ; my_RAM~1235 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1674 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1675 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1676 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1678 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1679 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1681 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1682 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1684 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1685 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1686 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1687 ; Clock    ;
+; N/A                                     ; None                                                ; 8.915 ns   ; Write_Adr[8] ; my_RAM~1688 ; Clock    ;
+; N/A                                     ; None                                                ; 8.914 ns   ; Write_En     ; my_RAM~3692 ; Clock    ;
+; N/A                                     ; None                                                ; 8.914 ns   ; Write_En     ; my_RAM~3695 ; Clock    ;
+; N/A                                     ; None                                                ; 8.901 ns   ; Write_Adr[8] ; my_RAM~1882 ; Clock    ;
+; N/A                                     ; None                                                ; 8.901 ns   ; Write_Adr[8] ; my_RAM~1884 ; Clock    ;
+; N/A                                     ; None                                                ; 8.901 ns   ; Write_Adr[8] ; my_RAM~1885 ; Clock    ;
+; N/A                                     ; None                                                ; 8.901 ns   ; Write_Adr[8] ; my_RAM~1887 ; Clock    ;
+; N/A                                     ; None                                                ; 8.901 ns   ; Write_Adr[8] ; my_RAM~1897 ; Clock    ;
+; N/A                                     ; None                                                ; 8.885 ns   ; Write_Adr[8] ; my_RAM~1250 ; Clock    ;
+; N/A                                     ; None                                                ; 8.885 ns   ; Write_Adr[8] ; my_RAM~1251 ; Clock    ;
+; N/A                                     ; None                                                ; 8.885 ns   ; Write_Adr[8] ; my_RAM~1253 ; Clock    ;
+; N/A                                     ; None                                                ; 8.885 ns   ; Write_Adr[8] ; my_RAM~1255 ; Clock    ;
+; N/A                                     ; None                                                ; 8.878 ns   ; Write_En     ; my_RAM~1101 ; Clock    ;
+; N/A                                     ; None                                                ; 8.878 ns   ; Write_En     ; my_RAM~1103 ; Clock    ;
+; N/A                                     ; None                                                ; 8.878 ns   ; Write_En     ; my_RAM~1104 ; Clock    ;
+; N/A                                     ; None                                                ; 8.878 ns   ; Write_En     ; my_RAM~1106 ; Clock    ;
+; N/A                                     ; None                                                ; 8.878 ns   ; Write_En     ; my_RAM~1107 ; Clock    ;
+; N/A                                     ; None                                                ; 8.878 ns   ; Write_En     ; my_RAM~1111 ; Clock    ;
+; N/A                                     ; None                                                ; 8.876 ns   ; Write_Adr[8] ; my_RAM~5307 ; Clock    ;
+; N/A                                     ; None                                                ; 8.876 ns   ; Write_Adr[8] ; my_RAM~5310 ; Clock    ;
+; N/A                                     ; None                                                ; 8.876 ns   ; Write_Adr[8] ; my_RAM~5313 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1307 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1308 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1311 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1314 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1315 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1317 ; Clock    ;
+; N/A                                     ; None                                                ; 8.875 ns   ; Write_Adr[8] ; my_RAM~1320 ; Clock    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;              ;             ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------+-------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+------------+-------------+---------------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From        ; To            ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+-------------+---------------+------------+
+; N/A                                     ; None                                                ; 19.013 ns  ; my_RAM~1866 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 18.796 ns  ; my_RAM~1610 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 18.764 ns  ; my_RAM~1354 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 15.839 ns  ; my_RAM~1098 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 15.273 ns  ; my_RAM~483  ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 15.213 ns  ; my_RAM~486  ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 15.095 ns  ; my_RAM~358  ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 15.075 ns  ; my_RAM~419  ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.973 ns  ; my_RAM~2358 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 14.760 ns  ; my_RAM~2997 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.745 ns  ; my_RAM~2437 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.674 ns  ; my_RAM~2933 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.670 ns  ; my_RAM~2181 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.668 ns  ; my_RAM~1039 ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.666 ns  ; my_RAM~2981 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.619 ns  ; my_RAM~1980 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.584 ns  ; my_RAM~2374 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 14.564 ns  ; my_RAM~1911 ; Read_Data[13] ; Clock      ;
+; N/A                                     ; None                                                ; 14.522 ns  ; my_RAM~2298 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.503 ns  ; my_RAM~3077 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.465 ns  ; my_RAM~1975 ; Read_Data[13] ; Clock      ;
+; N/A                                     ; None                                                ; 14.462 ns  ; my_RAM~2325 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.436 ns  ; my_RAM~2613 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.422 ns  ; my_RAM~355  ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.373 ns  ; my_RAM~3013 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.370 ns  ; my_RAM~3605 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.353 ns  ; my_RAM~2039 ; Read_Data[13] ; Clock      ;
+; N/A                                     ; None                                                ; 14.340 ns  ; my_RAM~422  ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 14.299 ns  ; my_RAM~2629 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.294 ns  ; my_RAM~2390 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 14.279 ns  ; my_RAM~3061 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.256 ns  ; my_RAM~2917 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.255 ns  ; my_RAM~3045 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.253 ns  ; my_RAM~351  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.251 ns  ; my_RAM~911  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.239 ns  ; my_RAM~565  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.236 ns  ; my_RAM~629  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.227 ns  ; my_RAM~1818 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.189 ns  ; my_RAM~2422 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 14.187 ns  ; my_RAM~495  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.179 ns  ; my_RAM~2293 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.164 ns  ; my_RAM~415  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.145 ns  ; my_RAM~1007 ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.140 ns  ; my_RAM~2309 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.135 ns  ; my_RAM~975  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.115 ns  ; my_RAM~2949 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.104 ns  ; my_RAM~437  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.066 ns  ; my_RAM~2837 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.065 ns  ; my_RAM~2501 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.062 ns  ; my_RAM~655  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.051 ns  ; my_RAM~2198 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 14.042 ns  ; my_RAM~687  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.011 ns  ; my_RAM~2885 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.010 ns  ; my_RAM~2245 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.008 ns  ; my_RAM~3082 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 14.007 ns  ; my_RAM~2869 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 14.003 ns  ; my_RAM~1850 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.998 ns  ; my_RAM~1196 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.997 ns  ; my_RAM~1612 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.994 ns  ; my_RAM~735  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.981 ns  ; my_RAM~373  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.971 ns  ; my_RAM~2277 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.957 ns  ; my_RAM~2805 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.953 ns  ; my_RAM~1802 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.950 ns  ; my_RAM~2549 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.945 ns  ; my_RAM~2730 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.944 ns  ; my_RAM~2646 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.941 ns  ; my_RAM~309  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.937 ns  ; my_RAM~1164 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.921 ns  ; my_RAM~2570 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.919 ns  ; my_RAM~572  ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.918 ns  ; my_RAM~1754 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.914 ns  ; my_RAM~3050 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.911 ns  ; my_RAM~2630 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.908 ns  ; my_RAM~2474 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.905 ns  ; my_RAM~287  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.897 ns  ; my_RAM~2314 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.889 ns  ; my_RAM~885  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.888 ns  ; my_RAM~719  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.885 ns  ; my_RAM~1559 ; Read_Data[13] ; Clock      ;
+; N/A                                     ; None                                                ; 13.869 ns  ; my_RAM~607  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.867 ns  ; my_RAM~1402 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.863 ns  ; my_RAM~421  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.860 ns  ; my_RAM~2565 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.855 ns  ; my_RAM~1148 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.854 ns  ; my_RAM~879  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.852 ns  ; my_RAM~2966 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.852 ns  ; my_RAM~2197 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.840 ns  ; my_RAM~847  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.827 ns  ; my_RAM~2026 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.825 ns  ; my_RAM~1964 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.823 ns  ; my_RAM~1996 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.820 ns  ; my_RAM~447  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.816 ns  ; my_RAM~2986 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.815 ns  ; my_RAM~2614 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.811 ns  ; my_RAM~303  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.809 ns  ; my_RAM~3477 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.798 ns  ; my_RAM~2165 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.795 ns  ; my_RAM~2229 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.789 ns  ; my_RAM~2538 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.785 ns  ; my_RAM~1916 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.777 ns  ; my_RAM~431  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.773 ns  ; my_RAM~799  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.772 ns  ; my_RAM~2166 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.767 ns  ; my_RAM~927  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.759 ns  ; my_RAM~1900 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.750 ns  ; my_RAM~815  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.742 ns  ; my_RAM~2117 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.742 ns  ; my_RAM~2149 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.741 ns  ; my_RAM~2965 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.740 ns  ; my_RAM~863  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.713 ns  ; my_RAM~357  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.704 ns  ; my_RAM~1738 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.702 ns  ; my_RAM~2485 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.700 ns  ; my_RAM~1635 ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.695 ns  ; my_RAM~2038 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.693 ns  ; my_RAM~749  ; Read_Data[3]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.689 ns  ; my_RAM~1983 ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.685 ns  ; my_RAM~2853 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.683 ns  ; my_RAM~943  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.680 ns  ; my_RAM~623  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.665 ns  ; my_RAM~1386 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.663 ns  ; my_RAM~2645 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.654 ns  ; my_RAM~2693 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.654 ns  ; my_RAM~2058 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.649 ns  ; my_RAM~2581 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.647 ns  ; my_RAM~4112 ; Read_Data[6]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.646 ns  ; my_RAM~575  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.642 ns  ; my_RAM~1546 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.641 ns  ; my_RAM~1482 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.640 ns  ; my_RAM~2426 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.635 ns  ; my_RAM~821  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.631 ns  ; my_RAM~3670 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.629 ns  ; my_RAM~869  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.626 ns  ; my_RAM~1932 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.622 ns  ; my_RAM~783  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.618 ns  ; my_RAM~543  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.616 ns  ; my_RAM~117  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.613 ns  ; my_RAM~444  ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.611 ns  ; my_RAM~1651 ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.609 ns  ; my_RAM~2134 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.606 ns  ; my_RAM~1795 ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.580 ns  ; my_RAM~559  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.573 ns  ; my_RAM~2746 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.568 ns  ; my_RAM~1690 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.565 ns  ; my_RAM~1370 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.556 ns  ; my_RAM~463  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.555 ns  ; my_RAM~2454 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.554 ns  ; my_RAM~1948 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.548 ns  ; my_RAM~3029 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.544 ns  ; my_RAM~2874 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.541 ns  ; my_RAM~1770 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.536 ns  ; my_RAM~2554 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.535 ns  ; my_RAM~399  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.530 ns  ; my_RAM~1420 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.529 ns  ; my_RAM~703  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.529 ns  ; my_RAM~2362 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.525 ns  ; my_RAM~2101 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.523 ns  ; my_RAM~436  ; Read_Data[10] ; Clock      ;
+; N/A                                     ; None                                                ; 13.522 ns  ; my_RAM~933  ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.521 ns  ; my_RAM~3430 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.511 ns  ; my_RAM~671  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.510 ns  ; my_RAM~2282 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.508 ns  ; my_RAM~2438 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.505 ns  ; my_RAM~1596 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.502 ns  ; my_RAM~2182 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.502 ns  ; my_RAM~2757 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.499 ns  ; my_RAM~2458 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.497 ns  ; my_RAM~159  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.494 ns  ; my_RAM~2266 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.492 ns  ; my_RAM~2886 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.486 ns  ; my_RAM~1498 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.483 ns  ; my_RAM~1395 ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.477 ns  ; my_RAM~2261 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.474 ns  ; my_RAM~3733 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.473 ns  ; my_RAM~1747 ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.467 ns  ; my_RAM~1526 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.467 ns  ; my_RAM~95   ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.465 ns  ; my_RAM~527  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.463 ns  ; my_RAM~3541 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.463 ns  ; my_RAM~1068 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.460 ns  ; my_RAM~700  ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.460 ns  ; my_RAM~3066 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.457 ns  ; my_RAM~1434 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.454 ns  ; my_RAM~2133 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.453 ns  ; my_RAM~1946 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.452 ns  ; my_RAM~2870 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.452 ns  ; my_RAM~2051 ; Read_Data[9]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.450 ns  ; my_RAM~1994 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.443 ns  ; my_RAM~1084 ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.439 ns  ; my_RAM~3093 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.439 ns  ; my_RAM~1722 ; Read_Data[0]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.437 ns  ; my_RAM~1607 ; Read_Data[13] ; Clock      ;
+; N/A                                     ; None                                                ; 13.431 ns  ; my_RAM~781  ; Read_Data[3]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.418 ns  ; my_RAM~2934 ; Read_Data[12] ; Clock      ;
+; N/A                                     ; None                                                ; 13.418 ns  ; my_RAM~4085 ; Read_Data[11] ; Clock      ;
+; N/A                                     ; None                                                ; 13.409 ns  ; my_RAM~175  ; Read_Data[5]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.394 ns  ; my_RAM~3490 ; Read_Data[8]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.392 ns  ; my_RAM~956  ; Read_Data[2]  ; Clock      ;
+; N/A                                     ; None                                                ; 13.392 ns  ; my_RAM~2042 ; Read_Data[0]  ; Clock      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;             ;               ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+-------------+---------------+------------+
+
+
++---------------------------------------------------------------------------+
+; tpd                                                                       ;
++-------+-------------------+-----------------+-------------+---------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From        ; To            ;
++-------+-------------------+-----------------+-------------+---------------+
+; N/A   ; None              ; 20.921 ns       ; Read_Adr[4] ; Read_Data[0]  ;
+; N/A   ; None              ; 19.530 ns       ; Read_Adr[5] ; Read_Data[0]  ;
+; N/A   ; None              ; 18.651 ns       ; Read_Adr[1] ; Read_Data[11] ;
+; N/A   ; None              ; 18.317 ns       ; Read_Adr[4] ; Read_Data[5]  ;
+; N/A   ; None              ; 18.210 ns       ; Read_Adr[3] ; Read_Data[11] ;
+; N/A   ; None              ; 18.128 ns       ; Read_Adr[4] ; Read_Data[11] ;
+; N/A   ; None              ; 18.063 ns       ; Read_Adr[3] ; Read_Data[5]  ;
+; N/A   ; None              ; 18.053 ns       ; Read_Adr[1] ; Read_Data[0]  ;
+; N/A   ; None              ; 17.909 ns       ; Read_Adr[5] ; Read_Data[11] ;
+; N/A   ; None              ; 17.695 ns       ; Read_Adr[2] ; Read_Data[13] ;
+; N/A   ; None              ; 17.682 ns       ; Read_Adr[3] ; Read_Data[13] ;
+; N/A   ; None              ; 17.621 ns       ; Read_Adr[4] ; Read_Data[12] ;
+; N/A   ; None              ; 17.517 ns       ; Read_Adr[5] ; Read_Data[8]  ;
+; N/A   ; None              ; 17.492 ns       ; Read_Adr[0] ; Read_Data[2]  ;
+; N/A   ; None              ; 17.428 ns       ; Read_Adr[4] ; Read_Data[4]  ;
+; N/A   ; None              ; 17.361 ns       ; Read_Adr[4] ; Read_Data[6]  ;
+; N/A   ; None              ; 17.359 ns       ; Read_Adr[1] ; Read_Data[5]  ;
+; N/A   ; None              ; 17.330 ns       ; Read_Adr[1] ; Read_Data[12] ;
+; N/A   ; None              ; 17.249 ns       ; Read_Adr[3] ; Read_Data[3]  ;
+; N/A   ; None              ; 17.235 ns       ; Read_Adr[4] ; Read_Data[2]  ;
+; N/A   ; None              ; 17.202 ns       ; Read_Adr[4] ; Read_Data[7]  ;
+; N/A   ; None              ; 17.081 ns       ; Read_Adr[4] ; Read_Data[1]  ;
+; N/A   ; None              ; 17.073 ns       ; Read_Adr[2] ; Read_Data[5]  ;
+; N/A   ; None              ; 17.057 ns       ; Read_Adr[4] ; Read_Data[13] ;
+; N/A   ; None              ; 16.950 ns       ; Read_Adr[3] ; Read_Data[8]  ;
+; N/A   ; None              ; 16.947 ns       ; Read_Adr[2] ; Read_Data[11] ;
+; N/A   ; None              ; 16.807 ns       ; Read_Adr[5] ; Read_Data[10] ;
+; N/A   ; None              ; 16.793 ns       ; Read_Adr[3] ; Read_Data[6]  ;
+; N/A   ; None              ; 16.721 ns       ; Read_Adr[0] ; Read_Data[11] ;
+; N/A   ; None              ; 16.684 ns       ; Read_Adr[0] ; Read_Data[0]  ;
+; N/A   ; None              ; 16.675 ns       ; Read_Adr[1] ; Read_Data[8]  ;
+; N/A   ; None              ; 16.659 ns       ; Read_Adr[5] ; Read_Data[2]  ;
+; N/A   ; None              ; 16.649 ns       ; Read_Adr[4] ; Read_Data[8]  ;
+; N/A   ; None              ; 16.566 ns       ; Read_Adr[3] ; Read_Data[2]  ;
+; N/A   ; None              ; 16.514 ns       ; Read_Adr[1] ; Read_Data[15] ;
+; N/A   ; None              ; 16.513 ns       ; Read_Adr[1] ; Read_Data[6]  ;
+; N/A   ; None              ; 16.508 ns       ; Read_Adr[4] ; Read_Data[10] ;
+; N/A   ; None              ; 16.491 ns       ; Read_Adr[3] ; Read_Data[12] ;
+; N/A   ; None              ; 16.489 ns       ; Read_Adr[0] ; Read_Data[7]  ;
+; N/A   ; None              ; 16.450 ns       ; Read_Adr[0] ; Read_Data[14] ;
+; N/A   ; None              ; 16.438 ns       ; Read_Adr[1] ; Read_Data[2]  ;
+; N/A   ; None              ; 16.396 ns       ; Read_Adr[4] ; Read_Data[9]  ;
+; N/A   ; None              ; 16.393 ns       ; Read_Adr[3] ; Read_Data[0]  ;
+; N/A   ; None              ; 16.386 ns       ; Read_Adr[1] ; Read_Data[10] ;
+; N/A   ; None              ; 16.377 ns       ; Read_Adr[2] ; Read_Data[10] ;
+; N/A   ; None              ; 16.365 ns       ; Read_Adr[3] ; Read_Data[1]  ;
+; N/A   ; None              ; 16.321 ns       ; Read_Adr[0] ; Read_Data[5]  ;
+; N/A   ; None              ; 16.261 ns       ; Read_Adr[2] ; Read_Data[9]  ;
+; N/A   ; None              ; 16.257 ns       ; Read_Adr[2] ; Read_Data[0]  ;
+; N/A   ; None              ; 16.189 ns       ; Read_Adr[5] ; Read_Data[5]  ;
+; N/A   ; None              ; 16.177 ns       ; Read_Adr[5] ; Read_Data[12] ;
+; N/A   ; None              ; 16.166 ns       ; Read_Adr[4] ; Read_Data[3]  ;
+; N/A   ; None              ; 16.086 ns       ; Read_Adr[0] ; Read_Data[12] ;
+; N/A   ; None              ; 16.076 ns       ; Read_Adr[2] ; Read_Data[12] ;
+; N/A   ; None              ; 16.051 ns       ; Read_Adr[5] ; Read_Data[13] ;
+; N/A   ; None              ; 16.030 ns       ; Read_Adr[1] ; Read_Data[13] ;
+; N/A   ; None              ; 16.018 ns       ; Read_Adr[5] ; Read_Data[1]  ;
+; N/A   ; None              ; 16.005 ns       ; Read_Adr[0] ; Read_Data[3]  ;
+; N/A   ; None              ; 15.998 ns       ; Read_Adr[0] ; Read_Data[10] ;
+; N/A   ; None              ; 15.989 ns       ; Read_Adr[1] ; Read_Data[7]  ;
+; N/A   ; None              ; 15.987 ns       ; Read_Adr[5] ; Read_Data[9]  ;
+; N/A   ; None              ; 15.982 ns       ; Read_Adr[3] ; Read_Data[4]  ;
+; N/A   ; None              ; 15.945 ns       ; Read_Adr[3] ; Read_Data[14] ;
+; N/A   ; None              ; 15.890 ns       ; Read_Adr[5] ; Read_Data[3]  ;
+; N/A   ; None              ; 15.804 ns       ; Read_Adr[1] ; Read_Data[14] ;
+; N/A   ; None              ; 15.795 ns       ; Read_Adr[5] ; Read_Data[6]  ;
+; N/A   ; None              ; 15.792 ns       ; Read_Adr[5] ; Read_Data[14] ;
+; N/A   ; None              ; 15.746 ns       ; Read_Adr[1] ; Read_Data[3]  ;
+; N/A   ; None              ; 15.740 ns       ; Read_Adr[2] ; Read_Data[3]  ;
+; N/A   ; None              ; 15.715 ns       ; Read_Adr[3] ; Read_Data[7]  ;
+; N/A   ; None              ; 15.710 ns       ; Read_Adr[2] ; Read_Data[6]  ;
+; N/A   ; None              ; 15.682 ns       ; Read_Adr[5] ; Read_Data[7]  ;
+; N/A   ; None              ; 15.594 ns       ; Read_Adr[5] ; Read_Data[4]  ;
+; N/A   ; None              ; 15.590 ns       ; Read_Adr[0] ; Read_Data[9]  ;
+; N/A   ; None              ; 15.576 ns       ; Read_Adr[2] ; Read_Data[8]  ;
+; N/A   ; None              ; 15.568 ns       ; Read_Adr[3] ; Read_Data[9]  ;
+; N/A   ; None              ; 15.499 ns       ; Read_Adr[3] ; Read_Data[15] ;
+; N/A   ; None              ; 15.490 ns       ; Read_Adr[4] ; Read_Data[15] ;
+; N/A   ; None              ; 15.425 ns       ; Read_Adr[2] ; Read_Data[2]  ;
+; N/A   ; None              ; 15.404 ns       ; Read_Adr[3] ; Read_Data[10] ;
+; N/A   ; None              ; 15.393 ns       ; Read_Adr[4] ; Read_Data[14] ;
+; N/A   ; None              ; 15.313 ns       ; Read_Adr[0] ; Read_Data[8]  ;
+; N/A   ; None              ; 15.238 ns       ; Read_Adr[1] ; Read_Data[1]  ;
+; N/A   ; None              ; 15.216 ns       ; Read_Adr[5] ; Read_Data[15] ;
+; N/A   ; None              ; 15.176 ns       ; Read_Adr[1] ; Read_Data[9]  ;
+; N/A   ; None              ; 15.103 ns       ; Read_Adr[2] ; Read_Data[14] ;
+; N/A   ; None              ; 15.012 ns       ; Read_Adr[0] ; Read_Data[13] ;
+; N/A   ; None              ; 14.988 ns       ; Read_Adr[2] ; Read_Data[4]  ;
+; N/A   ; None              ; 14.975 ns       ; Read_Adr[0] ; Read_Data[1]  ;
+; N/A   ; None              ; 14.929 ns       ; Read_Adr[0] ; Read_Data[6]  ;
+; N/A   ; None              ; 14.915 ns       ; Read_Adr[1] ; Read_Data[4]  ;
+; N/A   ; None              ; 14.809 ns       ; Read_Adr[2] ; Read_Data[15] ;
+; N/A   ; None              ; 14.776 ns       ; Read_Adr[0] ; Read_Data[4]  ;
+; N/A   ; None              ; 14.521 ns       ; Read_Adr[2] ; Read_Data[1]  ;
+; N/A   ; None              ; 14.491 ns       ; Read_Adr[2] ; Read_Data[7]  ;
+; N/A   ; None              ; 14.204 ns       ; Read_Adr[0] ; Read_Data[15] ;
+; N/A   ; None              ; 12.474 ns       ; Read_Adr[6] ; Read_Data[11] ;
+; N/A   ; None              ; 12.282 ns       ; Read_Adr[7] ; Read_Data[11] ;
+; N/A   ; None              ; 11.987 ns       ; Read_Adr[7] ; Read_Data[12] ;
+; N/A   ; None              ; 11.675 ns       ; Read_Adr[8] ; Read_Data[11] ;
+; N/A   ; None              ; 11.584 ns       ; Read_Adr[8] ; Read_Data[6]  ;
+; N/A   ; None              ; 11.283 ns       ; Read_Adr[6] ; Read_Data[12] ;
+; N/A   ; None              ; 11.193 ns       ; Read_Adr[8] ; Read_Data[2]  ;
+; N/A   ; None              ; 11.172 ns       ; Read_Adr[8] ; Read_Data[10] ;
+; N/A   ; None              ; 11.052 ns       ; Read_Adr[8] ; Read_Data[12] ;
+; N/A   ; None              ; 10.945 ns       ; Read_Adr[8] ; Read_Data[5]  ;
+; N/A   ; None              ; 10.891 ns       ; Read_Adr[6] ; Read_Data[0]  ;
+; N/A   ; None              ; 10.823 ns       ; Read_Adr[7] ; Read_Data[7]  ;
+; N/A   ; None              ; 10.755 ns       ; Read_Adr[7] ; Read_Data[2]  ;
+; N/A   ; None              ; 10.751 ns       ; Read_Adr[7] ; Read_Data[6]  ;
+; N/A   ; None              ; 10.714 ns       ; Read_Adr[8] ; Read_Data[9]  ;
+; N/A   ; None              ; 10.664 ns       ; Read_Adr[7] ; Read_Data[13] ;
+; N/A   ; None              ; 10.638 ns       ; Read_Adr[8] ; Read_Data[15] ;
+; N/A   ; None              ; 10.627 ns       ; Read_Adr[6] ; Read_Data[2]  ;
+; N/A   ; None              ; 10.582 ns       ; Read_Adr[6] ; Read_Data[8]  ;
+; N/A   ; None              ; 10.576 ns       ; Read_Adr[6] ; Read_Data[7]  ;
+; N/A   ; None              ; 10.489 ns       ; Read_Adr[7] ; Read_Data[4]  ;
+; N/A   ; None              ; 10.430 ns       ; Read_Adr[7] ; Read_Data[8]  ;
+; N/A   ; None              ; 10.392 ns       ; Read_Adr[8] ; Read_Data[14] ;
+; N/A   ; None              ; 10.345 ns       ; Read_Adr[8] ; Read_Data[8]  ;
+; N/A   ; None              ; 10.303 ns       ; Read_Adr[7] ; Read_Data[0]  ;
+; N/A   ; None              ; 10.280 ns       ; Read_Adr[6] ; Read_Data[5]  ;
+; N/A   ; None              ; 10.280 ns       ; Read_Adr[6] ; Read_Data[3]  ;
+; N/A   ; None              ; 10.274 ns       ; Read_Adr[6] ; Read_Data[1]  ;
+; N/A   ; None              ; 10.189 ns       ; Read_Adr[6] ; Read_Data[6]  ;
+; N/A   ; None              ; 10.178 ns       ; Read_Adr[6] ; Read_Data[15] ;
+; N/A   ; None              ; 10.170 ns       ; Read_Adr[7] ; Read_Data[10] ;
+; N/A   ; None              ; 10.110 ns       ; Read_Adr[8] ; Read_Data[0]  ;
+; N/A   ; None              ; 10.105 ns       ; Read_Adr[8] ; Read_Data[3]  ;
+; N/A   ; None              ; 10.083 ns       ; Read_Adr[7] ; Read_Data[15] ;
+; N/A   ; None              ; 10.057 ns       ; Read_Adr[7] ; Read_Data[14] ;
+; N/A   ; None              ; 9.965 ns        ; Read_Adr[6] ; Read_Data[13] ;
+; N/A   ; None              ; 9.950 ns        ; Read_Adr[7] ; Read_Data[9]  ;
+; N/A   ; None              ; 9.863 ns        ; Read_Adr[6] ; Read_Data[10] ;
+; N/A   ; None              ; 9.820 ns        ; Read_Adr[6] ; Read_Data[14] ;
+; N/A   ; None              ; 9.818 ns        ; Read_Adr[7] ; Read_Data[5]  ;
+; N/A   ; None              ; 9.775 ns        ; Read_Adr[6] ; Read_Data[4]  ;
+; N/A   ; None              ; 9.727 ns        ; Read_Adr[8] ; Read_Data[13] ;
+; N/A   ; None              ; 9.555 ns        ; Read_Adr[8] ; Read_Data[4]  ;
+; N/A   ; None              ; 9.527 ns        ; Read_Adr[8] ; Read_Data[7]  ;
+; N/A   ; None              ; 9.413 ns        ; Read_Adr[7] ; Read_Data[3]  ;
+; N/A   ; None              ; 9.413 ns        ; Read_Adr[8] ; Read_Data[1]  ;
+; N/A   ; None              ; 9.393 ns        ; Read_Adr[7] ; Read_Data[1]  ;
+; N/A   ; None              ; 9.382 ns        ; Read_Adr[6] ; Read_Data[9]  ;
++-------+-------------------+-----------------+-------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+-----------+----------------+-------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From           ; To          ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+----------------+-------------+----------+
+; N/A                                     ; None                                                ; -1.980 ns ; Write_Data[7]  ; my_RAM~4449 ; Clock    ;
+; N/A                                     ; None                                                ; -1.984 ns ; Write_Data[7]  ; my_RAM~4577 ; Clock    ;
+; N/A                                     ; None                                                ; -1.985 ns ; Write_Data[7]  ; my_RAM~4385 ; Clock    ;
+; N/A                                     ; None                                                ; -2.031 ns ; Write_Data[8]  ; my_RAM~1714 ; Clock    ;
+; N/A                                     ; None                                                ; -2.053 ns ; Write_Data[6]  ; my_RAM~1920 ; Clock    ;
+; N/A                                     ; None                                                ; -2.150 ns ; Write_Data[8]  ; my_RAM~1602 ; Clock    ;
+; N/A                                     ; None                                                ; -2.152 ns ; Write_Data[6]  ; my_RAM~1152 ; Clock    ;
+; N/A                                     ; None                                                ; -2.154 ns ; Write_Data[6]  ; my_RAM~1664 ; Clock    ;
+; N/A                                     ; None                                                ; -2.155 ns ; Write_Data[8]  ; my_RAM~1618 ; Clock    ;
+; N/A                                     ; None                                                ; -2.156 ns ; Write_Data[8]  ; my_RAM~1570 ; Clock    ;
+; N/A                                     ; None                                                ; -2.176 ns ; Write_Data[7]  ; my_RAM~5121 ; Clock    ;
+; N/A                                     ; None                                                ; -2.181 ns ; Write_Data[4]  ; my_RAM~3486 ; Clock    ;
+; N/A                                     ; None                                                ; -2.232 ns ; Write_Data[14] ; my_RAM~2808 ; Clock    ;
+; N/A                                     ; None                                                ; -2.254 ns ; Write_Data[8]  ; my_RAM~1922 ; Clock    ;
+; N/A                                     ; None                                                ; -2.262 ns ; Write_Data[4]  ; my_RAM~3886 ; Clock    ;
+; N/A                                     ; None                                                ; -2.267 ns ; Write_Data[14] ; my_RAM~2824 ; Clock    ;
+; N/A                                     ; None                                                ; -2.269 ns ; Write_Data[4]  ; my_RAM~4574 ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; Write_Data[6]  ; my_RAM~2016 ; Clock    ;
+; N/A                                     ; None                                                ; -2.277 ns ; Write_Data[4]  ; my_RAM~4382 ; Clock    ;
+; N/A                                     ; None                                                ; -2.278 ns ; Write_Data[4]  ; my_RAM~4446 ; Clock    ;
+; N/A                                     ; None                                                ; -2.278 ns ; Write_Data[4]  ; my_RAM~5118 ; Clock    ;
+; N/A                                     ; None                                                ; -2.291 ns ; Write_Data[6]  ; my_RAM~1536 ; Clock    ;
+; N/A                                     ; None                                                ; -2.302 ns ; Write_Data[3]  ; my_RAM~3037 ; Clock    ;
+; N/A                                     ; None                                                ; -2.307 ns ; Write_Data[13] ; my_RAM~2999 ; Clock    ;
+; N/A                                     ; None                                                ; -2.307 ns ; Write_Data[7]  ; my_RAM~4641 ; Clock    ;
+; N/A                                     ; None                                                ; -2.318 ns ; Write_Data[3]  ; my_RAM~2237 ; Clock    ;
+; N/A                                     ; None                                                ; -2.321 ns ; Write_Data[5]  ; my_RAM~1023 ; Clock    ;
+; N/A                                     ; None                                                ; -2.322 ns ; Write_Data[5]  ; my_RAM~767  ; Clock    ;
+; N/A                                     ; None                                                ; -2.323 ns ; Write_Data[10] ; my_RAM~6340 ; Clock    ;
+; N/A                                     ; None                                                ; -2.332 ns ; Write_Data[10] ; my_RAM~1716 ; Clock    ;
+; N/A                                     ; None                                                ; -2.332 ns ; Write_Data[10] ; my_RAM~1812 ; Clock    ;
+; N/A                                     ; None                                                ; -2.332 ns ; Write_Data[6]  ; my_RAM~1696 ; Clock    ;
+; N/A                                     ; None                                                ; -2.338 ns ; Write_Data[14] ; my_RAM~2840 ; Clock    ;
+; N/A                                     ; None                                                ; -2.342 ns ; Write_Data[10] ; my_RAM~1604 ; Clock    ;
+; N/A                                     ; None                                                ; -2.343 ns ; Write_Data[6]  ; my_RAM~1984 ; Clock    ;
+; N/A                                     ; None                                                ; -2.357 ns ; Write_Data[8]  ; my_RAM~1890 ; Clock    ;
+; N/A                                     ; None                                                ; -2.361 ns ; Write_Data[14] ; my_RAM~2792 ; Clock    ;
+; N/A                                     ; None                                                ; -2.361 ns ; Write_Data[9]  ; my_RAM~1235 ; Clock    ;
+; N/A                                     ; None                                                ; -2.367 ns ; Write_Data[1]  ; my_RAM~2667 ; Clock    ;
+; N/A                                     ; None                                                ; -2.369 ns ; Write_Data[12] ; my_RAM~4070 ; Clock    ;
+; N/A                                     ; None                                                ; -2.389 ns ; Write_Data[6]  ; my_RAM~6336 ; Clock    ;
+; N/A                                     ; None                                                ; -2.391 ns ; Write_Data[12] ; my_RAM~3846 ; Clock    ;
+; N/A                                     ; None                                                ; -2.393 ns ; Write_Data[9]  ; my_RAM~1635 ; Clock    ;
+; N/A                                     ; None                                                ; -2.394 ns ; Write_Data[15] ; my_RAM~3737 ; Clock    ;
+; N/A                                     ; None                                                ; -2.394 ns ; Write_Data[5]  ; my_RAM~607  ; Clock    ;
+; N/A                                     ; None                                                ; -2.394 ns ; Write_Data[4]  ; my_RAM~4510 ; Clock    ;
+; N/A                                     ; None                                                ; -2.396 ns ; Write_Data[15] ; my_RAM~3721 ; Clock    ;
+; N/A                                     ; None                                                ; -2.397 ns ; Write_Data[5]  ; my_RAM~559  ; Clock    ;
+; N/A                                     ; None                                                ; -2.398 ns ; Write_Data[2]  ; my_RAM~764  ; Clock    ;
+; N/A                                     ; None                                                ; -2.401 ns ; Write_Data[7]  ; my_RAM~3761 ; Clock    ;
+; N/A                                     ; None                                                ; -2.403 ns ; Write_Data[10] ; my_RAM~1908 ; Clock    ;
+; N/A                                     ; None                                                ; -2.403 ns ; Write_Data[3]  ; my_RAM~2525 ; Clock    ;
+; N/A                                     ; None                                                ; -2.405 ns ; Write_Data[10] ; my_RAM~1924 ; Clock    ;
+; N/A                                     ; None                                                ; -2.407 ns ; Write_Data[13] ; my_RAM~2759 ; Clock    ;
+; N/A                                     ; None                                                ; -2.408 ns ; Write_Data[13] ; my_RAM~2743 ; Clock    ;
+; N/A                                     ; None                                                ; -2.409 ns ; Write_Data[6]  ; my_RAM~1504 ; Clock    ;
+; N/A                                     ; None                                                ; -2.412 ns ; Write_Data[11] ; my_RAM~4869 ; Clock    ;
+; N/A                                     ; None                                                ; -2.412 ns ; Write_Data[6]  ; my_RAM~1248 ; Clock    ;
+; N/A                                     ; None                                                ; -2.414 ns ; Write_Data[6]  ; my_RAM~1328 ; Clock    ;
+; N/A                                     ; None                                                ; -2.415 ns ; Write_Data[15] ; my_RAM~3657 ; Clock    ;
+; N/A                                     ; None                                                ; -2.416 ns ; Write_Data[4]  ; my_RAM~3502 ; Clock    ;
+; N/A                                     ; None                                                ; -2.416 ns ; Write_Data[4]  ; my_RAM~3534 ; Clock    ;
+; N/A                                     ; None                                                ; -2.418 ns ; Write_Data[8]  ; my_RAM~1682 ; Clock    ;
+; N/A                                     ; None                                                ; -2.420 ns ; Write_Data[11] ; my_RAM~3813 ; Clock    ;
+; N/A                                     ; None                                                ; -2.423 ns ; Write_Data[5]  ; my_RAM~511  ; Clock    ;
+; N/A                                     ; None                                                ; -2.424 ns ; Write_Data[4]  ; my_RAM~4862 ; Clock    ;
+; N/A                                     ; None                                                ; -2.427 ns ; Write_Data[15] ; my_RAM~3241 ; Clock    ;
+; N/A                                     ; None                                                ; -2.427 ns ; Write_Data[6]  ; my_RAM~1776 ; Clock    ;
+; N/A                                     ; None                                                ; -2.427 ns ; Write_Data[4]  ; my_RAM~3390 ; Clock    ;
+; N/A                                     ; None                                                ; -2.429 ns ; Write_Data[7]  ; my_RAM~5713 ; Clock    ;
+; N/A                                     ; None                                                ; -2.431 ns ; Write_Data[3]  ; my_RAM~2557 ; Clock    ;
+; N/A                                     ; None                                                ; -2.433 ns ; Write_Data[6]  ; my_RAM~1424 ; Clock    ;
+; N/A                                     ; None                                                ; -2.435 ns ; Write_Data[12] ; my_RAM~5590 ; Clock    ;
+; N/A                                     ; None                                                ; -2.436 ns ; Write_Data[6]  ; my_RAM~1216 ; Clock    ;
+; N/A                                     ; None                                                ; -2.437 ns ; Write_Data[12] ; my_RAM~5654 ; Clock    ;
+; N/A                                     ; None                                                ; -2.437 ns ; Write_Data[3]  ; my_RAM~3069 ; Clock    ;
+; N/A                                     ; None                                                ; -2.438 ns ; Write_Data[3]  ; my_RAM~2301 ; Clock    ;
+; N/A                                     ; None                                                ; -2.442 ns ; Write_Data[10] ; my_RAM~1572 ; Clock    ;
+; N/A                                     ; None                                                ; -2.443 ns ; Write_Data[10] ; my_RAM~1620 ; Clock    ;
+; N/A                                     ; None                                                ; -2.443 ns ; Write_Data[6]  ; my_RAM~1728 ; Clock    ;
+; N/A                                     ; None                                                ; -2.444 ns ; Write_Data[6]  ; my_RAM~1472 ; Clock    ;
+; N/A                                     ; None                                                ; -2.447 ns ; Write_Data[7]  ; my_RAM~4113 ; Clock    ;
+; N/A                                     ; None                                                ; -2.449 ns ; Write_Data[7]  ; my_RAM~3345 ; Clock    ;
+; N/A                                     ; None                                                ; -2.449 ns ; Write_Data[6]  ; my_RAM~1184 ; Clock    ;
+; N/A                                     ; None                                                ; -2.450 ns ; Write_Data[7]  ; my_RAM~3601 ; Clock    ;
+; N/A                                     ; None                                                ; -2.450 ns ; Write_Data[6]  ; my_RAM~1952 ; Clock    ;
+; N/A                                     ; None                                                ; -2.452 ns ; Write_Data[14] ; my_RAM~3064 ; Clock    ;
+; N/A                                     ; None                                                ; -2.454 ns ; Write_Data[14] ; my_RAM~3000 ; Clock    ;
+; N/A                                     ; None                                                ; -2.454 ns ; Write_Data[2]  ; my_RAM~748  ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; Write_Data[10] ; my_RAM~1444 ; Clock    ;
+; N/A                                     ; None                                                ; -2.455 ns ; Write_Data[6]  ; my_RAM~1232 ; Clock    ;
+; N/A                                     ; None                                                ; -2.456 ns ; Write_Data[2]  ; my_RAM~876  ; Clock    ;
+; N/A                                     ; None                                                ; -2.458 ns ; Write_Data[0]  ; my_RAM~2362 ; Clock    ;
+; N/A                                     ; None                                                ; -2.463 ns ; Write_Data[2]  ; my_RAM~1036 ; Clock    ;
+; N/A                                     ; None                                                ; -2.464 ns ; Write_Data[0]  ; my_RAM~2474 ; Clock    ;
+; N/A                                     ; None                                                ; -2.467 ns ; Write_Data[11] ; my_RAM~5893 ; Clock    ;
+; N/A                                     ; None                                                ; -2.468 ns ; Write_Data[1]  ; my_RAM~2411 ; Clock    ;
+; N/A                                     ; None                                                ; -2.469 ns ; Write_Data[10] ; my_RAM~1140 ; Clock    ;
+; N/A                                     ; None                                                ; -2.471 ns ; Write_Data[12] ; my_RAM~3878 ; Clock    ;
+; N/A                                     ; None                                                ; -2.471 ns ; Write_Data[5]  ; my_RAM~879  ; Clock    ;
+; N/A                                     ; None                                                ; -2.472 ns ; Write_Data[12] ; my_RAM~3830 ; Clock    ;
+; N/A                                     ; None                                                ; -2.476 ns ; Write_Data[10] ; my_RAM~1492 ; Clock    ;
+; N/A                                     ; None                                                ; -2.479 ns ; Write_Data[7]  ; my_RAM~4337 ; Clock    ;
+; N/A                                     ; None                                                ; -2.479 ns ; Write_Data[0]  ; my_RAM~1098 ; Clock    ;
+; N/A                                     ; None                                                ; -2.481 ns ; Write_Data[12] ; my_RAM~6134 ; Clock    ;
+; N/A                                     ; None                                                ; -2.484 ns ; Write_Data[7]  ; my_RAM~4353 ; Clock    ;
+; N/A                                     ; None                                                ; -2.486 ns ; Write_Data[11] ; my_RAM~4261 ; Clock    ;
+; N/A                                     ; None                                                ; -2.487 ns ; Write_Data[12] ; my_RAM~3510 ; Clock    ;
+; N/A                                     ; None                                                ; -2.487 ns ; Write_Data[11] ; my_RAM~4181 ; Clock    ;
+; N/A                                     ; None                                                ; -2.487 ns ; Write_Data[11] ; my_RAM~4277 ; Clock    ;
+; N/A                                     ; None                                                ; -2.489 ns ; Write_Data[12] ; my_RAM~3526 ; Clock    ;
+; N/A                                     ; None                                                ; -2.489 ns ; Write_Data[11] ; my_RAM~4405 ; Clock    ;
+; N/A                                     ; None                                                ; -2.490 ns ; Write_Data[11] ; my_RAM~4165 ; Clock    ;
+; N/A                                     ; None                                                ; -2.490 ns ; Write_Data[10] ; my_RAM~1588 ; Clock    ;
+; N/A                                     ; None                                                ; -2.490 ns ; Write_Data[4]  ; my_RAM~3102 ; Clock    ;
+; N/A                                     ; None                                                ; -2.491 ns ; Write_Data[7]  ; my_RAM~4321 ; Clock    ;
+; N/A                                     ; None                                                ; -2.491 ns ; Write_Data[4]  ; my_RAM~3918 ; Clock    ;
+; N/A                                     ; None                                                ; -2.491 ns ; Write_Data[4]  ; my_RAM~3358 ; Clock    ;
+; N/A                                     ; None                                                ; -2.492 ns ; Write_Data[0]  ; my_RAM~2522 ; Clock    ;
+; N/A                                     ; None                                                ; -2.494 ns ; Write_Data[3]  ; my_RAM~2349 ; Clock    ;
+; N/A                                     ; None                                                ; -2.495 ns ; Write_Data[15] ; my_RAM~3705 ; Clock    ;
+; N/A                                     ; None                                                ; -2.495 ns ; Write_Data[5]  ; my_RAM~863  ; Clock    ;
+; N/A                                     ; None                                                ; -2.496 ns ; Write_Data[3]  ; my_RAM~2381 ; Clock    ;
+; N/A                                     ; None                                                ; -2.497 ns ; Write_Data[12] ; my_RAM~3814 ; Clock    ;
+; N/A                                     ; None                                                ; -2.497 ns ; Write_Data[5]  ; my_RAM~95   ; Clock    ;
+; N/A                                     ; None                                                ; -2.498 ns ; Write_Data[14] ; my_RAM~2584 ; Clock    ;
+; N/A                                     ; None                                                ; -2.500 ns ; Write_Data[3]  ; my_RAM~2333 ; Clock    ;
+; N/A                                     ; None                                                ; -2.500 ns ; Write_Data[3]  ; my_RAM~2429 ; Clock    ;
+; N/A                                     ; None                                                ; -2.500 ns ; Write_Data[0]  ; my_RAM~3034 ; Clock    ;
+; N/A                                     ; None                                                ; -2.501 ns ; Write_Data[12] ; my_RAM~5846 ; Clock    ;
+; N/A                                     ; None                                                ; -2.501 ns ; Write_Data[0]  ; my_RAM~3066 ; Clock    ;
+; N/A                                     ; None                                                ; -2.502 ns ; Write_Data[14] ; my_RAM~2552 ; Clock    ;
+; N/A                                     ; None                                                ; -2.502 ns ; Write_Data[9]  ; my_RAM~1811 ; Clock    ;
+; N/A                                     ; None                                                ; -2.503 ns ; Write_Data[9]  ; my_RAM~1555 ; Clock    ;
+; N/A                                     ; None                                                ; -2.504 ns ; Write_Data[15] ; my_RAM~3289 ; Clock    ;
+; N/A                                     ; None                                                ; -2.505 ns ; Write_Data[11] ; my_RAM~4421 ; Clock    ;
+; N/A                                     ; None                                                ; -2.505 ns ; Write_Data[9]  ; my_RAM~1491 ; Clock    ;
+; N/A                                     ; None                                                ; -2.509 ns ; Write_Data[3]  ; my_RAM~2493 ; Clock    ;
+; N/A                                     ; None                                                ; -2.510 ns ; Write_Data[3]  ; my_RAM~2365 ; Clock    ;
+; N/A                                     ; None                                                ; -2.511 ns ; Write_Data[4]  ; my_RAM~6014 ; Clock    ;
+; N/A                                     ; None                                                ; -2.511 ns ; Write_Data[2]  ; my_RAM~700  ; Clock    ;
+; N/A                                     ; None                                                ; -2.513 ns ; Write_Data[6]  ; my_RAM~1072 ; Clock    ;
+; N/A                                     ; None                                                ; -2.514 ns ; Write_Data[7]  ; my_RAM~4289 ; Clock    ;
+; N/A                                     ; None                                                ; -2.514 ns ; Write_Data[2]  ; my_RAM~956  ; Clock    ;
+; N/A                                     ; None                                                ; -2.515 ns ; Write_Data[11] ; my_RAM~3301 ; Clock    ;
+; N/A                                     ; None                                                ; -2.515 ns ; Write_Data[6]  ; my_RAM~1584 ; Clock    ;
+; N/A                                     ; None                                                ; -2.516 ns ; Write_Data[7]  ; my_RAM~4257 ; Clock    ;
+; N/A                                     ; None                                                ; -2.517 ns ; Write_Data[11] ; my_RAM~4069 ; Clock    ;
+; N/A                                     ; None                                                ; -2.517 ns ; Write_Data[7]  ; my_RAM~3121 ; Clock    ;
+; N/A                                     ; None                                                ; -2.517 ns ; Write_Data[2]  ; my_RAM~684  ; Clock    ;
+; N/A                                     ; None                                                ; -2.518 ns ; Write_Data[1]  ; my_RAM~2955 ; Clock    ;
+; N/A                                     ; None                                                ; -2.518 ns ; Write_Data[0]  ; my_RAM~2842 ; Clock    ;
+; N/A                                     ; None                                                ; -2.521 ns ; Write_Data[14] ; my_RAM~2440 ; Clock    ;
+; N/A                                     ; None                                                ; -2.521 ns ; Write_Data[11] ; my_RAM~3557 ; Clock    ;
+; N/A                                     ; None                                                ; -2.521 ns ; Write_Data[1]  ; my_RAM~7883 ; Clock    ;
+; N/A                                     ; None                                                ; -2.522 ns ; Write_Data[12] ; my_RAM~1270 ; Clock    ;
+; N/A                                     ; None                                                ; -2.523 ns ; Write_Data[15] ; my_RAM~4073 ; Clock    ;
+; N/A                                     ; None                                                ; -2.523 ns ; Write_Data[4]  ; my_RAM~3134 ; Clock    ;
+; N/A                                     ; None                                                ; -2.525 ns ; Write_Data[13] ; my_RAM~3383 ; Clock    ;
+; N/A                                     ; None                                                ; -2.525 ns ; Write_Data[11] ; my_RAM~3333 ; Clock    ;
+; N/A                                     ; None                                                ; -2.525 ns ; Write_Data[7]  ; my_RAM~6113 ; Clock    ;
+; N/A                                     ; None                                                ; -2.525 ns ; Write_Data[6]  ; my_RAM~1552 ; Clock    ;
+; N/A                                     ; None                                                ; -2.525 ns ; Write_Data[0]  ; my_RAM~2458 ; Clock    ;
+; N/A                                     ; None                                                ; -2.525 ns ; Write_Data[0]  ; my_RAM~2970 ; Clock    ;
+; N/A                                     ; None                                                ; -2.526 ns ; Write_Data[11] ; my_RAM~3877 ; Clock    ;
+; N/A                                     ; None                                                ; -2.526 ns ; Write_Data[11] ; my_RAM~5413 ; Clock    ;
+; N/A                                     ; None                                                ; -2.526 ns ; Write_Data[6]  ; my_RAM~1568 ; Clock    ;
+; N/A                                     ; None                                                ; -2.526 ns ; Write_Data[4]  ; my_RAM~4830 ; Clock    ;
+; N/A                                     ; None                                                ; -2.527 ns ; Write_Data[6]  ; my_RAM~1056 ; Clock    ;
+; N/A                                     ; None                                                ; -2.527 ns ; Write_Data[4]  ; my_RAM~4686 ; Clock    ;
+; N/A                                     ; None                                                ; -2.528 ns ; Write_Data[14] ; my_RAM~7896 ; Clock    ;
+; N/A                                     ; None                                                ; -2.528 ns ; Write_Data[10] ; my_RAM~1076 ; Clock    ;
+; N/A                                     ; None                                                ; -2.528 ns ; Write_Data[6]  ; my_RAM~1312 ; Clock    ;
+; N/A                                     ; None                                                ; -2.529 ns ; Write_Data[4]  ; my_RAM~4638 ; Clock    ;
+; N/A                                     ; None                                                ; -2.530 ns ; Write_Data[13] ; my_RAM~3095 ; Clock    ;
+; N/A                                     ; None                                                ; -2.530 ns ; Write_Data[10] ; my_RAM~1060 ; Clock    ;
+; N/A                                     ; None                                                ; -2.530 ns ; Write_Data[10] ; my_RAM~1524 ; Clock    ;
+; N/A                                     ; None                                                ; -2.530 ns ; Write_Data[4]  ; my_RAM~4654 ; Clock    ;
+; N/A                                     ; None                                                ; -2.531 ns ; Write_Data[6]  ; my_RAM~1872 ; Clock    ;
+; N/A                                     ; None                                                ; -2.533 ns ; Write_Data[15] ; my_RAM~3113 ; Clock    ;
+; N/A                                     ; None                                                ; -2.533 ns ; Write_Data[0]  ; my_RAM~2714 ; Clock    ;
+; N/A                                     ; None                                                ; -2.534 ns ; Write_Data[15] ; my_RAM~3177 ; Clock    ;
+; N/A                                     ; None                                                ; -2.535 ns ; Write_Data[13] ; my_RAM~3575 ; Clock    ;
+; N/A                                     ; None                                                ; -2.535 ns ; Write_Data[10] ; my_RAM~2036 ; Clock    ;
+; N/A                                     ; None                                                ; -2.536 ns ; Write_Data[15] ; my_RAM~3305 ; Clock    ;
+; N/A                                     ; None                                                ; -2.536 ns ; Write_Data[7]  ; my_RAM~4865 ; Clock    ;
+; N/A                                     ; None                                                ; -2.537 ns ; Write_Data[12] ; my_RAM~4358 ; Clock    ;
+; N/A                                     ; None                                                ; -2.538 ns ; Write_Data[12] ; my_RAM~4614 ; Clock    ;
+; N/A                                     ; None                                                ; -2.538 ns ; Write_Data[11] ; my_RAM~5605 ; Clock    ;
+; N/A                                     ; None                                                ; -2.538 ns ; Write_Data[6]  ; my_RAM~1488 ; Clock    ;
+; N/A                                     ; None                                                ; -2.539 ns ; Write_Data[10] ; my_RAM~1556 ; Clock    ;
+; N/A                                     ; None                                                ; -2.539 ns ; Write_Data[6]  ; my_RAM~1360 ; Clock    ;
+; N/A                                     ; None                                                ; -2.541 ns ; Write_Data[6]  ; my_RAM~1808 ; Clock    ;
+; N/A                                     ; None                                                ; -2.542 ns ; Write_Data[10] ; my_RAM~1428 ; Clock    ;
+; N/A                                     ; None                                                ; -2.543 ns ; Write_Data[12] ; my_RAM~4406 ; Clock    ;
+; N/A                                     ; None                                                ; -2.543 ns ; Write_Data[4]  ; my_RAM~5758 ; Clock    ;
+; N/A                                     ; None                                                ; -2.543 ns ; Write_Data[0]  ; my_RAM~2202 ; Clock    ;
+; N/A                                     ; None                                                ; -2.545 ns ; Write_Data[15] ; my_RAM~4009 ; Clock    ;
+; N/A                                     ; None                                                ; -2.545 ns ; Write_Data[6]  ; my_RAM~6288 ; Clock    ;
+; N/A                                     ; None                                                ; -2.545 ns ; Write_Data[3]  ; my_RAM~6157 ; Clock    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;                ;             ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+----------------+-------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 25 15:49:33 2020
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off RAM -c RAM --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clock" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "Clock"
+Info: tsu for register "my_RAM~1101" (data pin = "Write_Adr[8]", clock pin = "Clock") is 10.126 ns
+    Info: + Longest pin to register delay is 12.526 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.780 ns) = 0.780 ns; Loc. = PIN_L16; Fanout = 386; PIN Node = 'Write_Adr[8]'
+        Info: 2: + IC(5.389 ns) + CELL(0.228 ns) = 6.397 ns; Loc. = LCCOMB_X27_Y17_N8; Fanout = 64; COMB Node = 'my_RAM~11325'
+        Info: 3: + IC(2.108 ns) + CELL(0.366 ns) = 8.871 ns; Loc. = LCCOMB_X15_Y16_N0; Fanout = 16; COMB Node = 'my_RAM~11341'
+        Info: 4: + IC(2.909 ns) + CELL(0.746 ns) = 12.526 ns; Loc. = LCFF_X30_Y1_N19; Fanout = 1; REG Node = 'my_RAM~1101'
+        Info: Total cell delay = 2.120 ns ( 16.92 % )
+        Info: Total interconnect delay = 10.406 ns ( 83.08 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 2.490 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'Clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8192; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(0.675 ns) + CELL(0.618 ns) = 2.490 ns; Loc. = LCFF_X30_Y1_N19; Fanout = 1; REG Node = 'my_RAM~1101'
+        Info: Total cell delay = 1.472 ns ( 59.12 % )
+        Info: Total interconnect delay = 1.018 ns ( 40.88 % )
+Info: tco from clock "Clock" to destination pin "Read_Data[0]" through register "my_RAM~1866" is 19.013 ns
+    Info: + Longest clock path from clock "Clock" to source register is 2.481 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'Clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8192; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(0.666 ns) + CELL(0.618 ns) = 2.481 ns; Loc. = LCFF_X29_Y3_N19; Fanout = 1; REG Node = 'my_RAM~1866'
+        Info: Total cell delay = 1.472 ns ( 59.33 % )
+        Info: Total interconnect delay = 1.009 ns ( 40.67 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 16.438 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X29_Y3_N19; Fanout = 1; REG Node = 'my_RAM~1866'
+        Info: 2: + IC(3.150 ns) + CELL(0.272 ns) = 3.422 ns; Loc. = LCCOMB_X6_Y23_N0; Fanout = 1; COMB Node = 'my_RAM~8296'
+        Info: 3: + IC(3.581 ns) + CELL(0.378 ns) = 7.381 ns; Loc. = LCCOMB_X29_Y2_N20; Fanout = 1; COMB Node = 'my_RAM~8300'
+        Info: 4: + IC(1.886 ns) + CELL(0.357 ns) = 9.624 ns; Loc. = LCCOMB_X11_Y8_N18; Fanout = 1; COMB Node = 'my_RAM~8301'
+        Info: 5: + IC(1.844 ns) + CELL(0.357 ns) = 11.825 ns; Loc. = LCCOMB_X30_Y12_N16; Fanout = 1; COMB Node = 'my_RAM~8365'
+        Info: 6: + IC(0.206 ns) + CELL(0.053 ns) = 12.084 ns; Loc. = LCCOMB_X30_Y12_N4; Fanout = 1; COMB Node = 'my_RAM~8390'
+        Info: 7: + IC(2.210 ns) + CELL(2.144 ns) = 16.438 ns; Loc. = PIN_N21; Fanout = 0; PIN Node = 'Read_Data[0]'
+        Info: Total cell delay = 3.561 ns ( 21.66 % )
+        Info: Total interconnect delay = 12.877 ns ( 78.34 % )
+Info: Longest tpd from source pin "Read_Adr[4]" to destination pin "Read_Data[0]" is 20.921 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N3; Fanout = 899; PIN Node = 'Read_Adr[4]'
+    Info: 2: + IC(6.998 ns) + CELL(0.053 ns) = 7.905 ns; Loc. = LCCOMB_X6_Y23_N0; Fanout = 1; COMB Node = 'my_RAM~8296'
+    Info: 3: + IC(3.581 ns) + CELL(0.378 ns) = 11.864 ns; Loc. = LCCOMB_X29_Y2_N20; Fanout = 1; COMB Node = 'my_RAM~8300'
+    Info: 4: + IC(1.886 ns) + CELL(0.357 ns) = 14.107 ns; Loc. = LCCOMB_X11_Y8_N18; Fanout = 1; COMB Node = 'my_RAM~8301'
+    Info: 5: + IC(1.844 ns) + CELL(0.357 ns) = 16.308 ns; Loc. = LCCOMB_X30_Y12_N16; Fanout = 1; COMB Node = 'my_RAM~8365'
+    Info: 6: + IC(0.206 ns) + CELL(0.053 ns) = 16.567 ns; Loc. = LCCOMB_X30_Y12_N4; Fanout = 1; COMB Node = 'my_RAM~8390'
+    Info: 7: + IC(2.210 ns) + CELL(2.144 ns) = 20.921 ns; Loc. = PIN_N21; Fanout = 0; PIN Node = 'Read_Data[0]'
+    Info: Total cell delay = 4.196 ns ( 20.06 % )
+    Info: Total interconnect delay = 16.725 ns ( 79.94 % )
+Info: th for register "my_RAM~4449" (data pin = "Write_Data[7]", clock pin = "Clock") is -1.980 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 2.485 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'Clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 8192; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(0.670 ns) + CELL(0.618 ns) = 2.485 ns; Loc. = LCFF_X39_Y19_N21; Fanout = 1; REG Node = 'my_RAM~4449'
+        Info: Total cell delay = 1.472 ns ( 59.24 % )
+        Info: Total interconnect delay = 1.013 ns ( 40.76 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 4.614 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.800 ns) = 0.800 ns; Loc. = PIN_K6; Fanout = 512; PIN Node = 'Write_Data[7]'
+        Info: 2: + IC(3.505 ns) + CELL(0.309 ns) = 4.614 ns; Loc. = LCFF_X39_Y19_N21; Fanout = 1; REG Node = 'my_RAM~4449'
+        Info: Total cell delay = 1.109 ns ( 24.04 % )
+        Info: Total interconnect delay = 3.505 ns ( 75.96 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Fri Dec 25 15:49:36 2020
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
